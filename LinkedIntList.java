@@ -114,70 +114,7 @@ public class LinkedIntList {
 			}
 			current.next=current2.next;
 		}
-	}
-	
-	public LinkedIntList teklerisil() {
-		LinkedIntList list2= new LinkedIntList();
-		if(front != null) {
-			list2.front=front;
-			front=front.next;                                 // 5 7 8 9 10 7
-			ListNode current= front;                          // 5 8 10    tek indxlileri silior
-			ListNode list2last= list2.front;
-			
-			while(current != null && current.next != null) {
-				list2last.next= current.next;
-				list2last=current.next;
-				current.next= current.next.next;
-				current= current.next;
-			}
-			list2last.next=null;
-		}		
-		return list2;
-	}
-	
-	public LinkedIntList ciftlerisil() {
-		LinkedIntList list2= new LinkedIntList();
-		if(front!=null)
-		{
-			list2.front=front.next;
-			ListNode current=front;
-			ListNode list2last=list2.front;
-			
-			while(current!=null&&current.next!=null) {
-				current.next=current.next.next;
-				current=current.next;
-				list2last.next=current.next;
-				list2last=current.next;				
-			}
-			current.next=null;
-		}
-		
-		
-		
-		return list2;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	}	
 }
 
 
